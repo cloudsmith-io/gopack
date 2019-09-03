@@ -1,6 +1,14 @@
 # gopack
 
+[![Release](https://img.shields.io/github/release/cloudsmith-io/gopack.svg?style=for-the-badge)](https://github.com/cloudsmith-io/gopack/releases/latest)
+
 `gopack` is a small utility designed to pack a local Go module into a Zip file which can then be distributed using a private Go module registry (like Cloudsmith).
+
+## Install
+
+Download the appropriate version for your platform from [`gopack` Releases](https://github.com/cloudsmith-io/gopack/releases). Once downloaded, the binary can be run from anywhere. You don’t need to install it into a global location. This works well for shared hosts and other systems where you don’t have a privileged account.
+
+Ideally, you should install it somewhere in your `PATH` for easy use. `/usr/local/bin` is the most probable location.
 
 ## Usage
 

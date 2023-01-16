@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/rogpeppe/go-internal/module"
 	"github.com/spf13/cobra"
+	"golang.org/x/mod/module"
 
 	"github.com/cloudsmith-io/gopack"
 )

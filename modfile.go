@@ -6,7 +6,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/rogpeppe/go-internal/modfile"
+	"golang.org/x/mod/modfile"
 )
 
 // GetModuleNameFromModfile reads a go.mod file from the given directory and

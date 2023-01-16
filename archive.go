@@ -9,8 +9,10 @@ import (
 	"strings"
 )
 
+type FileFilter = func(path string) bool
+
 // CreateModuleArchive zips up relevant files to create a compliant Go module zip file.
-func CreateModuleArchive(dir, modPath, version string) error {
+func CreateModuleArchive(dir, modPath, version string, filter FileFilter) error {
 	archiveFileName := fmt.Sprintf("%s.zip", version)
 	writer, err := os.Create(filepath.Join(dir, archiveFileName))
 	if err != nil {
@@ -29,6 +31,9 @@ func CreateModuleArchive(dir, modPath, version string) error {
 			return nil
 		}
 		if strings.Contains(path, ".git") || strings.HasSuffix(path, archiveFileName) {
+			return nil
+		}
+		if filter != nil && filter(path) {
 			return nil
 		}
 

@@ -1,4 +1,4 @@
-package gopack
+package archive
 
 import (
 	"archive/zip"
